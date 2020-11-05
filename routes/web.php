@@ -15,10 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
 });
-Route::get('list','view@list');
-Route::get('create','view@create');
-Route::POST('loginsubmit','view@loginsubmit');
 
-Route::POST('createsubmit','view@createsubmit');
+Route::post('upload','Users@index');
+Route::view('form','Userform');
